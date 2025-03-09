@@ -18,8 +18,8 @@ This program:
 
 gcc hw4_tee.c -o hw4_tee
 echo "Hello, world!" | ./hw4_tee file2.txt
-./hw4_tee file2.txt < file1.txt
-cat file1.txt | ./hw4_tee file2.txt
+cat file1.txt | ./hw4_tee -a file2.txt
+cat file1.txt | ./hw4_tee file2.txt file3.txt
 */
 
 
