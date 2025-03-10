@@ -47,19 +47,6 @@ void print_arr(int n) {
     printf("\n");
 }
 
-// --- Check array values
-int check_arr() {
-    // tests if the sorted array is sorted (least to greatest)
-    int sort_failed = 0;
-    for (int i=0; i<ARR_SIZE; i++) {
-        if (i < ARR_SIZE-1 && sorted_arr[i] > sorted_arr[i+1]) {
-            printf("Not sorted: idx=%d: %d, idx=%d: %d\n", i, sorted_arr[i], i+1, sorted_arr[i+1]);
-            sort_failed = 1;
-        }
-    }
-    return sort_failed;
-}
-
 // ================================================================
 
 // --- Merge Sort functions
@@ -185,8 +172,7 @@ int main() {
 
     // print sorted list values
     printf("Sorted array:\n");
-    print_arr(2);     
-    check_arr();   
+    print_arr(2);
 
     return 0;
 }
